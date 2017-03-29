@@ -1,0 +1,31 @@
+body {
+    font-family: Verdana,sans-serif;
+}
+.navbar-default {
+    background-color: #4d636f;
+}
+.navbar-default .navbar-collapse {
+    background-color: #4d636f;
+}
+.navbar-default .navbar-nav>li>a:focus,
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-brand:focus,
+.navbar-default .navbar-brand:hover {
+    color: #000;
+    background-color: #ccc;
+    cursor: pointer;
+}
+.navbar-default .navbar-nav>li>a,
+.navbar-default .navbar-text,
+.navbar-default .navbar-brand {
+    color: #fff;
+}
+.navbar-brand {
+    background-color: #3a4b53;
+}
+.navbar-brand:before {
+    font: normal normal normal 14px/1 FontAwesome;
+    content: "\f015";
+    margin-right: 14px;
+    font-size: 18px;
+}
