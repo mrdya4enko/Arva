@@ -14,7 +14,7 @@
                             {!! Form::label('first_name', 'First Name:', ['class' => 'col-md-4 control-label']) !!}
 
                             <div class="col-md-6">
-                                {!! Form::text('first_name', old('first_name'), ['class' => 'form-control', 'placeholder' => 'Enter the first name', 'required' => 'required', 'autofocus' => 'autofocus']) !!}
+                                {!! Form::text('first_name', old('first_name'), ['class' => 'form-control', 'placeholder' => 'Enter the first name', 'autofocus' => 'autofocus']) !!}
 
                                 @if ($errors->has('first_name'))
                                     <span class="help-block">
@@ -28,7 +28,7 @@
                             {!! Form::label('last_name', 'Last Name:', ['class' => 'col-md-4 control-label']) !!}
 
                             <div class="col-md-6">
-                                {!! Form::text('last_name', old('last_name'), ['class' => 'form-control', 'placeholder' => 'Enter the last name', 'required' => 'required', 'autofocus' => 'autofocus']) !!}
+                                {!! Form::text('last_name', old('last_name'), ['class' => 'form-control', 'placeholder' => 'Enter the last name', 'autofocus' => 'autofocus']) !!}
 
                                 @if ($errors->has('last_name'))
                                     <span class="help-block">
@@ -42,7 +42,7 @@
                             {!! Form::label('email', 'E-Mail Address:', ['class' => 'col-md-4 control-label']) !!}
 
                             <div class="col-md-6">
-                                {!! Form::text('email', old('email'), ['class' => 'form-control', 'placeholder' => 'Enter the e-mail address', 'required' => 'required']) !!}
+                                {!! Form::text('email', old('email'), ['class' => 'form-control', 'placeholder' => 'Enter the e-mail address',]) !!}
 
                                 @if ($errors->has('email'))
                                     <span class="help-block">
@@ -56,7 +56,7 @@
                             {!! Form::label('password', 'Password:', ['class' => 'col-md-4 control-label']) !!}
 
                             <div class="col-md-6">
-                                {!! Form::text('password', old('password'), ['class' => 'form-control', 'placeholder' => 'Enter the password', 'required' => 'required']) !!}
+                                {!! Form::password('password', ['class' => 'form-control', 'placeholder' => 'Enter the password',]) !!}
 
                                 @if ($errors->has('password'))
                                     <span class="help-block">
@@ -70,7 +70,7 @@
                             {!! Form::label('password_confirmation', 'Confirm Password:', ['class' => 'col-md-4 control-label']) !!}
 
                             <div class="col-md-6">
-                                {!! Form::text('password_confirmation', old('password_confirmation'), ['class' => 'form-control', 'placeholder' => 'Enter the password', 'required' => 'required']) !!}
+                                {!! Form::password('password_confirmation', ['class' => 'form-control', 'placeholder' => 'Enter the password']) !!}
                             </div>
                         </div>
 
@@ -78,7 +78,7 @@
                             {!! Form::label('birthday', 'Birthday:', ['class' => 'col-md-4 control-label']) !!}
 
                             <div class="col-md-6">
-                                {!! Form::date('birthday', old('birthday'), ['class' => 'form-control', 'required' => 'required']) !!}
+                                {!! Form::date('birthday', old('birthday'), ['class' => 'form-control']) !!}
                                 </div>
                         </div>
 
@@ -93,14 +93,6 @@
                                     'class' => 'form-control',
                                     'required' => 'required'
                                 ]) !!}
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            {!! Form::label('avatar', 'Avatar:', ['class' => 'col-md-4 control-label']) !!}
-
-                            <div class="col-md-6">
-                                {!! Form::file('avatar', ['class' => 'filestyle', 'data-buttonText' => 'Choose image', 'data-buttonName' => 'btn-primary', 'data-placeholder' => 'File not found']) !!}
                             </div>
                         </div>
 
