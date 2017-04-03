@@ -1,6 +1,9 @@
 body {
     font-family: Verdana,sans-serif;
 }
+a {
+    text-decoration: none;
+}
 .navbar-default {
     background-color: #4d636f;
 }
@@ -29,3 +32,349 @@ body {
     margin-right: 14px;
     font-size: 18px;
 }
+.form-control {
+    width: 100%;
+    height: 36px;
+    padding: 6px 12px;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccd0d2;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.form-control {
+    display: block;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555;
+}
+.form-control:focus {
+    border-color: #98cbe8;
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(152,203,232,.6);
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #3097d1;
+    border-color: #2a88bd;
+}
+.btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.6;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#addAlbumBlock,
+#addPhotoBlock {
+    background: #fff;
+    height: 140px;
+    width: 740px;
+    position: absolute;
+    left: 50%;
+    margin-left: -370px;
+    top: -350px;
+
+    -webkit-transition: top 0.5s;
+    -moz-transition: top 0.5s;
+    -o-transition: top 0.5s;
+    transition: top 0.5s;
+
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    -moz-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    -o-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+
+    z-index: 100;
+}
+#addAlbum:hover,
+#addPhotos:hover,
+.linkAllAlbums:hover,
+.form-find-friend input[type='submit']:hover,
+.form-find-friend input[type='reset']:hover,
+.friend input[type='button']:hover {
+    -webkit-box-shadow: 0 0 9px 2px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0 0 9px 2px rgba(0,0,0,0.4);
+    -o-box-shadow: 0 0 9px 2px rgba(0,0,0,0.4);
+    box-shadow: 0 0 9px 2px rgba(0,0,0,0.4);
+}
+#cancelAlbumBlock,
+#cancelAddPhotoBlock {
+    width: 30px;
+    position: absolute;
+    right: 0;
+    font-size: 25px;
+}
+#addAlbumBlock form label,
+#addPhotoBlock form label {
+    margin: 25px;
+    display: inline-block;
+}
+#addAlbumBlock form input[type='text'] {
+    display: inline-block;
+    height: 36px;
+    padding: 6px 12px;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccd0d2;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+#addAlbumBlock form input[type='text']:focus {
+    border-color: #98cbe8;
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(152,203,232,.6);
+}
+#addPhotoBlock form input[type='file'] {
+    display: inline-block;
+    width: 100%;
+    margin: 10px 0px 50px 22px;
+}
+#addAlbumBlock form input[type='submit'],
+#addPhotoBlock form input[type='submit'] {
+    margin-left: 44%;
+}
+#addAlbumBlock form input[type='reset'] {
+}
+#addPhotoBlock form input[type='reset'],
+#addAlbumBlock form input[type='reset'],
+#addPhotoBlock form input[type='submit'],
+#addAlbumBlock form input[type='submit'] {
+    color: #fff;
+    background-color: #607d8b;
+    border: none;
+    display: inline-block;
+    padding: 6px 16px;
+    text-decoration: none;
+    cursor: pointer;
+
+    webkit-transition: background-color .25s,color .15s,box-shadow .25s,opacity 0.25s,filter 0.25s,border 0.15s;
+    -moz-transition: background-color .25s,color .15s,box-shadow .15s,opacity .25s,filter .25s,border .15s;
+    -o-transition: background-color .25s,color .15s,box-shadow .15s,opacity .25s,filter .25s,border .15s;
+    transition: background-color .25s,color .15s,box-shadow .15s,opacity .25s,filter .25s,border .15s;
+}
+#addAlbumBlock.active,
+#addPhotoBlock.active {
+    top: 80px;
+    position: fixed;
+    margin-left: -370px;
+}
+#forFogging {
+    height: 100%;
+    width: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    z-index: -99;
+}
+#forFogging.fogging {
+    z-index: 99;
+    background:rgba(0,0,0,0.5);
+}
+.blockAlbum {
+    width: 360px;
+    height: 210px;
+    display: inline-block;
+    margin: 16px 0px 0px 16px;
+    vertical-align: top;
+    position: relative;
+
+    webkit-transition: background-color .25s;
+    -moz-transition: background-color .25s;
+    -o-transition: background-color .25s;
+    transition: background-color .25s;
+}
+.blockAlbum a {
+    text-decoration: none;
+    display: block;
+    margin: 10px;
+    width: 150px;
+    cursor: pointer;
+}
+.blockAlbum a:hover {
+    text-decoration: underline;
+}
+.blockAlbum h3 {
+    display: inline;
+}
+.photoOnAlbum {
+    height: 124px;
+    max-width: 150px;
+    margin: 0px 0px 0px 10px;
+}
+.blockAlbum ul {
+    list-style: none;
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 15px;
+    float: right;
+}
+.blockAlbum .deleteAlbum {
+    width: 30px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 10px 10px 0 0;
+    font-size: 20px;
+}
+.blockAlbum .deleteAlbum:hover {
+    color: #f00;
+}
+.allAlbums {
+    margin: 10px;
+    background: #7d97a5;
+    color: #fff;
+}
+.photo {
+    position: relative;
+    display: inline;
+    line-height: 45px;
+}
+.photo a {
+    width: 10px;
+    font-size: 20px;
+    display: inline-block;
+}
+.photoInAlbum {
+    width: 25%;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+.deleteIcon {
+    height: 25px;
+    left: 43%;
+    bottom: 25px;
+    position: absolute;
+    z-index: 0;
+
+    webkit-transition: bottom .5s ease;
+    -moz-transition: bottom .5s ease;
+    -o-transition: bottom .5s ease;
+    transition: bottom .5s ease;
+}
+.photo:hover .deleteIcon {
+    bottom: -7px;
+}
+.popup {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+    text-align: center;
+    z-index: 98;
+}
+.popup_bg {
+    background: rgba(0,0,0,0.5);
+    position: absolute;
+    z-index: 99;
+    height: 100%;
+    width: 100%;
+}
+.popup_img {
+    position: relative;
+    margin: 55px auto;
+    z-index: 100;
+    max-height: 90%;
+    max-width: 90%;
+}
+.form-find-friend .find-friend {
+    width: 200px;
+    display: inline-block;
+}
+    .form-find-friend input[type='submit'],
+    .form-find-friend input[type='reset']{
+        vertical-align: top;
+    }
+.friend {
+    padding: 5px;
+}
+    .friend img {
+        height: 100px;
+    }
+    .friend ul {
+        list-style: none;
+        margin: 0px 0px 0px 15px;
+        padding: 0;
+        display: inline-block;
+        vertical-align: top;
+    }
+    .friend ul li:first-child {
+        font-size: 20px;
+    }
+    .friend form {
+        display: inline-block;
+        width: 134px;
+        padding: 10px;
+        vertical-align: top;
+        float: right;
+    }
+        .friend form input:first-child {
+            margin-bottom: 5px;
+        }
+        .friend form input:last-child {
+            float: right;
+        }
+.dialog {
+    padding: 5px;
+    position: relative;
+}
+.dialog-block:hover {
+    background-color: #efefef;
+}
+    .dialog img {
+        height: 60px;
+    }
+    .dialog a {
+        position: absolute;
+        right: -9px;
+        top: 2px;
+        cursor: pointer;
+    }
+    .dialog .dialog-content {
+        display: inline-block;
+        vertical-align: top;
+        width: 90%;
+    }
+        .dialog .dialog-content h6 {
+            display: inline-block;
+            vertical-align: top;
+            margin: 0px 0px 0px 10px;
+        }
+        .dialog .dialog-content time {
+            float: right;
+        }
+        .dialog .dialog-content p {
+            margin: 3px 0px 3px 10px;
+            background-color: #e8e8e8;
+            padding: 4px;
+        }

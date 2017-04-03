@@ -91,7 +91,7 @@ ul.ul{list-style-type:none;padding:0;margin:0}ul.ul li{padding:8px 16px;border-b
 .pagination{display:inline-block;padding:0;margin:0}.pagination li{display:inline}
 .pagination li a{text-decoration:none;color:#000;float:left;padding:8px 16px}
 .pagination li a:hover{background-color:#ccc}
-.input-group,.group{margin-top:24px;margin-bottom:24px}
+.input-group,.group{margin-bottom:24px}
 .input{padding:8px;display:block;border:none;border-bottom:1px solid #808080;width:100%}
 .label{color:#009688}.input:not(:valid)~.validate{color:#f44336}
 .select{padding:9px 0;width:100%;color:#000;border:1px solid transparent;border-bottom:1px solid #009688}
@@ -206,7 +206,7 @@ input[type=checkbox].check:disabled+.validate,input[type=radio].radio:disabled+.
 .border-0{border:0!important}.border{border:1px solid #ccc!important}
 .border-top{border-top:1px solid #ccc!important}.border-bottom{border-bottom:1px solid #ccc!important}
 .border-left{border-left:1px solid #ccc!important}.border-right{border-right:1px solid #ccc!important}
-.margin{margin:16px!important}.margin-0{margin:0!important}
+.margin{margin:16px}.margin-0{margin:0!important}
 .margin-top{margin-top:16px!important}.margin-bottom{margin-bottom:16px!important}
 .margin-left{margin-left:16px!important}.margin-right{margin-right:16px!important}
 .section{margin-top:16px!important;margin-bottom:16px!important}
@@ -302,7 +302,7 @@ input[type=checkbox].check:disabled+.validate,input[type=radio].radio:disabled+.
 .sand,.hover-sand:hover{color:#000!important;background-color:#fdf5e6!important}
 .teal,.hover-teal:hover{color:#fff!important;background-color:#009688!important}
 .yellow,.hover-yellow:hover{color:#000!important;background-color:#ffeb3b!important}
-.white,.hover-white:hover{color:#000!important;background-color:#fff!important}
+.white,.hover-white:hover{color:#000;background-color:#fff}
 .black,.hover-black:hover{color:#fff!important;background-color:#000!important}
 .grey,.hover-grey:hover,.gray,.hover-gray:hover{color:#000!important;background-color:#9e9e9e!important}
 .light-grey,.hover-light-grey:hover,.light-gray,.hover-light-gray:hover{color:#000!important;background-color:#f1f1f1!important}

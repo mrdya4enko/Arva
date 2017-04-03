@@ -23,30 +23,9 @@
             <div id="Demo2" class="hide container">
                 <p>Some other text..</p>
             </div>
-            <button onclick="myFunction('Demo3')" class="button block theme-l1 left-align"><i class="fa fa-users fa-fw margin-right"></i> My Photos</button>
-            <div id="Demo3" class="hide container">
-                <div class="row-padding">
-                    <br>
-                    <div class="half">
-                        <img src="{{ asset('img/lights.jpg') }}" style="width:100%" class="margin-bottom">
-                    </div>
-                    <div class="half">
-                        <img src="{{ asset('img/nature.jpg') }}" style="width:100%" class="margin-bottom">
-                    </div>
-                    <div class="half">
-                        <img src="{{ asset('img/mountains.jpg') }}" style="width:100%" class="margin-bottom">
-                    </div>
-                    <div class="half">
-                        <img src="{{ asset('img/forest.jpg') }}" style="width:100%" class="margin-bottom">
-                    </div>
-                    <div class="half">
-                        <img src="{{ asset('img/nature.jpg') }}" style="width:100%" class="margin-bottom">
-                    </div>
-                    <div class="half">
-                        <img src="{{ asset('img/fjords.jpg') }}" style="width:100%" class="margin-bottom">
-                    </div>
-                </div>
-            </div>
+            <a href="/albums">
+                <button class="button block theme-l1 left-align"><i class="fa fa-users fa-fw margin-right"></i> My Photos</button>
+            </a>
         </div>
     </div>
     <br>
