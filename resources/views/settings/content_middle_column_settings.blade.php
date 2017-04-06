@@ -91,10 +91,10 @@
             </div>
 
             <div class="form-group{{ $errors->has('city') ? ' has-error' : '' }}">
-                {!! Form::label('city', 'City:', ['class' => 'col-md-4 control-label']) !!}
+                {!! Form::label('city_id', 'City:', ['class' => 'col-md-4 control-label']) !!}
 
                 <div class="col-md-6">
-                    {!! Form::text('city', old('city'), ['class' => 'form-control', 'placeholder' => 'Enter your city', 'autofocus' => 'autofocus']) !!}
+                    {!! Form::text('city_id', old('city'), ['class' => 'form-control', 'placeholder' => 'Enter your city', 'autofocus' => 'autofocus']) !!}
 
                     @if ($errors->has('city'))
                         <span class="help-block">
@@ -119,9 +119,9 @@
             </div>
 
             <div class="form-group">
-                {!! Form::label('images', 'Avatar:', ['class' => 'col-xs-2 control-label']) !!}
+                {!! Form::label('avatar', 'Avatar:', ['class' => 'col-xs-2 control-label']) !!}
                 <div class="col-xs-8">
-                    {!! Form::file('images', ['class' => 'filestyle', 'data-buttonText' => 'Выберите изображение', 'data-buttonName' => 'btn-primary', 'data-placeholder' => 'Файла нет']) !!}
+                    {!! Form::file('avatar', ['class' => 'filestyle', 'data-buttonText' => 'Выберите изображение', 'data-buttonName' => 'btn-primary', 'data-placeholder' => 'Файла нет']) !!}
                 </div>
             </div>
 

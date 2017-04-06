@@ -14,13 +14,15 @@ Auth::routes();
 
 Route::get('/', ['uses' => 'HomeController@action', 'as' => 'home'])->middleware('auth');
 
-Route::get('/logout', ['uses' => 'LogoutController@action', 'as' => 'logout']);
+Route::get('/logout', ['uses' => 'LogoutController@action', 'as' => 'logout'])->middleware('auth');
 
-Route::get('/settings', ['uses' => 'SettingsController@action', 'as' => 'settings']);
+Route::match(['get', 'post'], '/settings', ['uses' => 'SettingsController@action', 'as' => 'settings'])->middleware('auth');
 
-Route::get('/albums', ['uses' => 'AlbumsController@action', 'as' => 'albums']);
-Route::get('/album/1', ['uses' => 'AlbumController@action']);
+Route::get('/news', ['uses' => 'NewsController@action', 'as' => 'news'])->middleware('auth');
 
-Route::get('/friends', ['uses' => 'FriendsController@action', 'as' => 'friends']);
+Route::get('/albums', ['uses' => 'AlbumsController@action', 'as' => 'albums'])->middleware('auth');
+Route::get('/album/1', ['uses' => 'AlbumController@action'])->middleware('auth');
 
-Route::get('/messages', ['uses' => 'MessagesController@action', 'as' => 'messages']);
+Route::get('/friends', ['uses' => 'FriendsController@action', 'as' => 'friends'])->middleware('auth');
+
+Route::get('/messages', ['uses' => 'MessagesController@action', 'as' => 'messages'])->middleware('auth');
