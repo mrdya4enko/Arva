@@ -31,8 +31,8 @@ class SettingsController extends Controller
                 return redirect() -> route('settings') -> withErrors($validator);
             }
             */
-            dd($input);
-            $city = City::where('name', $input['city'])->first();
+
+            $city = City::where('name', $input['city_id'])->first();
             if($city != NULL) {
                 $input['city_id'] = $city->id;
             } else {
