@@ -22,9 +22,9 @@
         <a class="bar-item button hide-medium hide-large right padding-large hover-white large theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
         <a href="{{ route('home') }}" class="bar-item button padding-large theme-d4"><i class="fa fa-home margin-right"></i>ArVa</a>
         <a href="{{ route('news') }}" class="bar-item button hide-small padding-large hover-white" title="News"><i class="fa fa-globe"></i></a>
-        <a href="{{ route('settings') }}" class="bar-item button hide-small padding-large hover-white" title="Account Settings"><i class="fa fa-user"></i></a>
+        <a href="{{ route('friends') }}" class="bar-item button hide-small padding-large hover-white" title="Friends"><i class="fa fa-user"></i></a>
         <a href="{{ route('messages') }}" class="bar-item button hide-small padding-large hover-white" title="Messages"><i class="fa fa-envelope"></i></a>
-        <a href="{{ route('friends') }}" class="bar-item button hide-small padding-large hover-white" title="Friends"><i class="fa fa-users"></i></a>
+        <a href="{{ route('users') }}" class="bar-item button hide-small padding-large hover-white" title="Users"><i class="fa fa-users"></i></a>
         <div class="dropdown-hover hide-small">
             <button class="button padding-large" title="Notifications"><i class="fa fa-bell"></i><span class="badge right small green">3</span></button>
             <div class="dropdown-content card-4 bar-block" style="width:300px">
@@ -34,7 +34,7 @@
             </div>
         </div>
         <a href="{{ route('logout') }}" class="bar-item button hide-small right padding-large hover-white" title="Logout"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
-        <a href="#" class="bar-item button hide-small right padding-large hover-white" title="My Account"><img src="{{ asset('img/avatar2.png') }}" class="circle" style="height:25px;width:25px" alt="Avatar"></a>
+        <a href="{{ route('settings') }}" class="bar-item button hide-small right padding-large hover-white" title="Settings"><i class="fa fa-cog" aria-hidden="true"></i></a>
 
     </div>
 </div>

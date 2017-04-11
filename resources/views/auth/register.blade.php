@@ -75,14 +75,6 @@
                         </div>
 
                         <div class="form-group">
-                            {!! Form::label('birthday', 'Birthday:', ['class' => 'col-md-4 control-label']) !!}
-
-                            <div class="col-md-6">
-                                {!! Form::date('birthday', old('birthday'), ['class' => 'form-control']) !!}
-                                </div>
-                        </div>
-
-                        <div class="form-group">
                             {!! Form::label('gender', 'Gender:', ['class' => 'col-md-4 control-label']) !!}
 
                             <div class="col-md-6">

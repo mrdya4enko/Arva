@@ -20,6 +20,8 @@ Route::match(['get', 'post'], '/settings', ['uses' => 'SettingsController@action
 
 Route::get('/news', ['uses' => 'NewsController@action', 'as' => 'news'])->middleware('auth');
 
+Route::get('/users', ['uses' => 'UsersController@action', 'as' => 'users'])->middleware('auth');
+
 Route::get('/albums', ['uses' => 'AlbumsController@action', 'as' => 'albums'])->middleware('auth');
 Route::get('/album/1', ['uses' => 'AlbumController@action'])->middleware('auth');
 
