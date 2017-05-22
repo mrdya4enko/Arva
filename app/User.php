@@ -36,6 +36,6 @@ class User extends Authenticatable
     ];
     public function city()
     {
-        $this->belongsTo('App\City');
+        return $this->belongsTo(City::class);
     }
 }

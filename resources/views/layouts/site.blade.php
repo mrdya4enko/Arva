@@ -60,6 +60,7 @@
         <!-- End Middle Column -->
 
         <!-- Right Column -->
+    <!--yield('content_right_column_home')-->
         @yield('right_column')
         <!-- End Right Column -->
     </div>

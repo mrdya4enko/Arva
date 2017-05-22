@@ -179,6 +179,9 @@ return [
 
         /*Forms & HTML*/
         Collective\Html\HtmlServiceProvider::class,
+
+        /*Notificatios*/
+        //App\Providers\ComposerServiceProvider::class
     ],
 
     /*

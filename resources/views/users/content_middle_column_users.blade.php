@@ -20,6 +20,7 @@
             {{ session('status') }}
         </div>
     @endif
+
     @foreach($users as $user)
         <div class="container card-2 white round margin">
             <div class="friend">
@@ -27,11 +28,24 @@
                 <ul>
                     <li>{{ $user->first_name }} {{$user->last_name}}</li>
                     <li>Birthday {{ $user->birthday }}</li>
-                    <li>{{ $user->city_id }}</li>
+                    <li>{{ $cities[$user->city_id] ?? '' }}</li>
                 </ul>
+                <!--<form action="">-->
+                @if (in_array($user->id, $friends))
+                    <a href="{{ route('deleteFriend', ['id' => $user->id]) }}" class="btn theme">Delete friend</a>
+                    <!--<input class="btn theme" formaction="" type="button" value="Add friend">-->
+                @elseif (in_array($user->id, $receivers))
+                    <p class="btn theme">Send request</p>
+                        <!--<input class="btn theme" formaction="" type="button" value="Delete friend">-->
+                @elseif (in_array($user->id, $senders))
+                    <a href="{{ route('acceptRequest', ['id' => $user->id]) }}" class="btn theme">Subscriber</a>
+                @else
+                    <a href="{{ route('sendingRequest', ['id' => $user->id]) }}" class="btn theme">Add friend</a>
+                    <!--<input class="btn theme" formaction="" type="button" value="Delete friend">-->
+                @endif
+                <!--</form>-->
                 <form action="#">
-                    <input class="btn theme" type="button" value="Send mesage">
-                    <input class="btn theme" type="button" value="Delete">
+                    <input class="btn theme" type="button" value="Send message">
                 </form>
             </div>
         </div>

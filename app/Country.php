@@ -8,6 +8,6 @@ class Country extends Model
 {
     public function city()
     {
-        $this->hasMany('App\City');
+        return $this->hasMany(City::class);
     }
 }
