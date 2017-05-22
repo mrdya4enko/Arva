@@ -177,11 +177,13 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        Barryvdh\Debugbar\ServiceProvider::class,
+
         /*Forms & HTML*/
         Collective\Html\HtmlServiceProvider::class,
 
         /*Notificatios*/
-        //App\Providers\ComposerServiceProvider::class
+        App\Http\ViewComposers\ComposerServiceProvider::class
     ],
 
     /*
@@ -233,6 +235,8 @@ return [
 
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
+
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
     ],
 
 ];

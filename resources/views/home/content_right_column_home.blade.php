@@ -9,6 +9,7 @@
         </div>
     </div>
     <br>
+    <h1>{{$data }}</h1>
 
     @if(!empty($dataUser))
 
