@@ -21,7 +21,7 @@ Route::match(['get', 'post'], '/settings', ['uses' => 'SettingsController@action
 Route::get('/news', ['uses' => 'NewsController@action', 'as' => 'news'])->middleware('auth');
 
 Route::get('/users', ['uses' => 'UsersController@showUsers', 'as' => 'users'])->middleware('auth');
-Route::post('/users/find', ['uses' => 'UsersController@findUsers', 'as' => 'findUsers'])->middleware('auth');
+Route::get('/users/find', ['uses' => 'UsersController@findUsers', 'as' => 'findUsers'])->middleware('auth');
 Route::get('/users/add/{id}', ['uses' => 'UsersController@sendingRequest', 'as' => 'sendingRequest'])->middleware('auth');
 Route::get('/users/accept/{id}', ['uses' => 'UsersController@acceptRequest', 'as' => 'acceptRequest'])->middleware('auth');
 Route::get('/users/decline/{id}', ['uses' => 'UsersController@declineRequest', 'as' => 'declineRequest'])->middleware('auth');

@@ -41,12 +41,12 @@ class ProfileComposer
      */
     public function compose(View $view)
     {
-//        $myId = Auth::id();
-//        $request = \App\Request::take(1)->where('receiver', $myId)->get()->pluck('sender')->toArray();
-//        if(!empty($request)) {
-//            $view->with('dataUser', User::where('id', $request[0])->get()->toArray()) ;
-//        }
-        $view->with('data', 'Some content') ;
+      $myId = Auth::id();
+      $request = \App\Request::take(1)->where('receiver', $myId)->get()->pluck('sender')->toArray();
+       if(!empty($request)) {
+           $view->with('dataUser', User::where('id', $request[0])->get()->toArray()) ;
+       }
+        //$view->with('data', 'Some content') ;
     }
-
+    
 }

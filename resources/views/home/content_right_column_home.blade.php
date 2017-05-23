@@ -9,14 +9,13 @@
         </div>
     </div>
     <br>
-    <h1>{{$data }}</h1>
 
     @if(!empty($dataUser))
 
         <div class="card-2 round white center">
             <div class="container">
                 <p>Friend Request</p>
-                <img src="img/avatar/{{ $dataUser[0]['avatar'] }}" alt="Avatar" style="width:50%"><br>
+                <img src="http://arva.local/img/avatar/{{ $dataUser[0]['avatar'] }}" alt="Avatar" style="width:50%"><br>
                 <span>{{ $dataUser[0]['first_name'] . ' ' . $dataUser[0]['last_name'] }}</span>
                 <div class="row opacity">
                     <div class="half">

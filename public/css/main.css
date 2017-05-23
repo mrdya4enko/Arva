@@ -89,7 +89,8 @@ ul.ul{list-style-type:none;padding:0;margin:0}ul.ul li{padding:8px 16px;border-b
 .modal-content{margin:auto;background-color:#fff;position:relative;padding:0;outline:0;width:600px}.closebtn{text-decoration:none;float:right;font-size:24px;font-weight:bold;color:inherit}
 .closebtn:hover,.closebtn:focus{color:#000;text-decoration:none;cursor:pointer}
 .pagination{display:inline-block;padding:0;margin:0}.pagination li{display:inline}
-.pagination li a{text-decoration:none;color:#000;float:left;padding:8px 16px}
+.pagination li a{text-decoration:none;color:#000;/*float:left;*/padding:8px 16px}
+.pagination li span{padding: 8px 16px;}
 .pagination li a:hover{background-color:#ccc}
 .input-group,.group{margin-bottom:24px}
 .input{padding:8px;display:block;border:none;border-bottom:1px solid #808080;width:100%}

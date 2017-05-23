@@ -2,12 +2,12 @@
     <!-- Profile -->
     <div class="card-2 round white">
         <div class="container">
-            <h4 class="center">My Profile</h4>
-            <p class="center"><img src="{{ asset('img/avatar3.png') }}" class="circle" style="height:106px;width:106px" alt="Avatar"></p>
+            <h4 class="center">{{ $info['all'][0]->first_name . ' ' . $info['all'][0]->last_name }}</h4>
+            <p class="center"><img src="http://arva.local/img/avatar/{{  $info['all'][0]->avatar }}" class="circle" style="height:106px;width:106px" alt="Avatar"></p>
             <hr>
-            <p><i class="fa fa-pencil fa-fw margin-right text-theme"></i> Designer, UI</p>
-            <p><i class="fa fa-home fa-fw margin-right text-theme"></i> London, UK</p>
-            <p><i class="fa fa-birthday-cake fa-fw margin-right text-theme"></i> April 1, 1988</p>
+            <p><i class="fa fa-pencil fa-fw margin-right text-theme"></i>{{ $info['all'][0]->phone }}</p>
+            <p><i class="fa fa-home fa-fw margin-right text-theme"></i>{{ $info['city'][0]->name . ', ' . $info['country'][0]->name}}</p>
+            <p><i class="fa fa-birthday-cake fa-fw margin-right text-theme"></i>{{ $info['all'][0]->birthday }}</p>
         </div>
     </div>
     <br>
@@ -15,14 +15,12 @@
     <!-- Accordion -->
     <div class="card-2 round">
         <div class="white">
-            <button onclick="myFunction('Demo1')" class="button block theme-l1 left-align"><i class="fa fa-circle-o-notch fa-fw margin-right"></i> My Groups</button>
-            <div id="Demo1" class="hide container">
-                <p>Some text..</p>
-            </div>
-            <button onclick="myFunction('Demo2')" class="button block theme-l1 left-align"><i class="fa fa-calendar-check-o fa-fw margin-right"></i> My Events</button>
-            <div id="Demo2" class="hide container">
-                <p>Some other text..</p>
-            </div>
+            <a href="#">
+                <button class="button block theme-l1 left-align"><i class="fa fa-circle-o-notch fa-fw margin-right"></i> My Groups</button>
+            </a>
+            <a href="#">
+                <button class="button block theme-l1 left-align"><i class="fa fa-calendar-check-o fa-fw margin-right"></i> My Events</button>
+            </a>
             <a href="/albums">
                 <button class="button block theme-l1 left-align"><i class="fa fa-users fa-fw margin-right"></i> My Photos</button>
             </a>

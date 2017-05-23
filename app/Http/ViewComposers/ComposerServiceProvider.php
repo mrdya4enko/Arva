@@ -23,7 +23,10 @@ class ComposerServiceProvider extends ServiceProvider
 
         // Using class based composers...
         View::composer(
-            'home.home', 'App\Http\ViewComposers\ProfileComposer'
+            'home.content_right_column_home', 'App\Http\ViewComposers\ProfileComposer'
+        );
+        View::composer(
+            'home.content_left_column_home', 'App\Http\ViewComposers\LeftColumnComposer'
         );
 
     }
