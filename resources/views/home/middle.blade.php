@@ -16,7 +16,10 @@
         <span class="right opacity">1 min</span>
         <h4>John Doe</h4><br>
         <hr class="clear">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         <div class="row-padding" style="margin:0 -16px">
             <div class="half">
                 <img src="{{ asset('img/lights.jpg') }}" style="width:100%" alt="Northern Lights" class="margin-bottom">

@@ -29,9 +29,9 @@
                 </div>
             </div>
         </div>
-    <br>
+        <br>
     @endif
-    <!--<div class="card-2 round white padding-16 center">
+<!--<div class="card-2 round white padding-16 center">
         <p>ADS</p>
     </div>
     <br>

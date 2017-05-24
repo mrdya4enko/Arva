@@ -1,13 +1,13 @@
 @extends('layouts.site')
 
 @section('left_column')
-@include('home.content_left_column_home')
+@include('sidebar.left')
 @endsection
 
 @section('middle_column')
-@include('home.content_middle_column_home')
+@include('home.middle')
 @endsection
 
 @section('right_column')
-@include('home.content_right_column_home')
+@include('sidebar.right')
 @endsection

@@ -20,15 +20,17 @@ Route::match(['get', 'post'], '/settings', ['uses' => 'SettingsController@action
 
 Route::get('/news', ['uses' => 'NewsController@action', 'as' => 'news'])->middleware('auth');
 
-Route::get('/users', ['uses' => 'UsersController@showUsers', 'as' => 'users'])->middleware('auth');
-Route::get('/users/find', ['uses' => 'UsersController@findUsers', 'as' => 'findUsers'])->middleware('auth');
-Route::get('/users/add/{id}', ['uses' => 'UsersController@sendingRequest', 'as' => 'sendingRequest'])->middleware('auth');
-Route::get('/users/accept/{id}', ['uses' => 'UsersController@acceptRequest', 'as' => 'acceptRequest'])->middleware('auth');
-Route::get('/users/decline/{id}', ['uses' => 'UsersController@declineRequest', 'as' => 'declineRequest'])->middleware('auth');
-Route::get('/users/delete/{id}', ['uses' => 'UsersController@deleteFriend', 'as' => 'deleteFriend'])->middleware('auth');
-Route::get('/users/show', ['uses' => 'HomeController@showRequest', 'as' => 'showRequest'])->middleware('auth');
+Route::group(['prefix' => 'users/', 'middleware' => 'web'], function() {
+    Route::get('show', ['as' => 'users', 'uses' => 'UsersController@showUsers']);
+    Route::get('find', ['as' => 'findUsers', 'uses' => 'UsersController@findUsers']);
+    Route::get('add/{id}', ['as' => 'sendingRequest', 'uses' => 'UsersController@sendingRequest'])->where(['id' => '[0-9]+']);
+    Route::get('accept/{id}', ['as' => 'acceptRequest', 'uses' => 'UsersController@acceptRequest'])->where(['id' => '[0-9]+']);
+    Route::get('decline/{id}', ['as' => 'declineRequest', 'uses' => 'UsersController@declineRequest'])->where(['id' => '[0-9]+']);
+    Route::get('delete/{id}', ['as' => 'deleteFriend', 'uses' => 'UsersController@deleteFriend'])->where(['id' => '[0-9]+']);
+});
 
 Route::get('/albums', ['uses' => 'AlbumsController@action', 'as' => 'albums'])->middleware('auth');
+
 Route::get('/album/1', ['uses' => 'AlbumController@action'])->middleware('auth');
 
 Route::get('/friends', ['uses' => 'FriendsController@action', 'as' => 'friends'])->middleware('auth');

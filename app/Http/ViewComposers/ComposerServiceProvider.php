@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: ydy
- * Date: 5/22/17
- * Time: 12:34 PM
- */
 
 namespace App\Http\ViewComposers;
 
@@ -20,15 +14,12 @@ class ComposerServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-
-        // Using class based composers...
         View::composer(
-            'home.content_right_column_home', 'App\Http\ViewComposers\ProfileComposer'
+            'sidebar.right', 'App\Http\ViewComposers\RightSidebarComposer'
         );
         View::composer(
-            'home.content_left_column_home', 'App\Http\ViewComposers\LeftColumnComposer'
+            'sidebar.left', 'App\Http\ViewComposers\LeftSidebarComposer'
         );
-
     }
 
     /**

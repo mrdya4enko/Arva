@@ -2,12 +2,12 @@
     <!-- Profile -->
     <div class="card-2 round white">
         <div class="container">
-            <h4 class="center">{{ $info['all'][0]->first_name . ' ' . $info['all'][0]->last_name }}</h4>
-            <p class="center"><img src="http://arva.local/img/avatar/{{  $info['all'][0]->avatar }}" class="circle" style="height:106px;width:106px" alt="Avatar"></p>
+            <h4 class="center">{{ $info['all']->first_name . ' ' . $info['all']->last_name }}</h4>
+            <p class="center"><img src="http://arva.local/img/avatar/{{  $info['all']->avatar }}" class="circle" style="height:106px;width:106px" alt="Avatar"></p>
             <hr>
-            <p><i class="fa fa-pencil fa-fw margin-right text-theme"></i>{{ $info['all'][0]->phone }}</p>
-            <p><i class="fa fa-home fa-fw margin-right text-theme"></i>{{ $info['city'][0]->name . ', ' . $info['country'][0]->name}}</p>
-            <p><i class="fa fa-birthday-cake fa-fw margin-right text-theme"></i>{{ $info['all'][0]->birthday }}</p>
+            <p><i class="fa fa-pencil fa-fw margin-right text-theme"></i>{{ $info['all']->phone }}</p>
+            <p><i class="fa fa-home fa-fw margin-right text-theme"></i>{{ $info['city']->name . ', ' . $info['country']->name}}</p>
+            <p><i class="fa fa-birthday-cake fa-fw margin-right text-theme"></i>{{ $info['all']->birthday }}</p>
         </div>
     </div>
     <br>

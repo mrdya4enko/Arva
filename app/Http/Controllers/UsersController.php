@@ -2,11 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\City;
-use App\Friend;
-use App\Subscription;
-use App\User;
-use Collective\Html\Eloquent\FormAccessible;
+use App\{City, Friend, Subscription, User, Request as Req};
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -29,7 +25,8 @@ class UsersController extends Controller
                 $checkId->whereIn('friend1', $usersId)
                     ->where('friend2', $myId);
             })->get()->toArray();
-        $checkRequests = \App\Request::where(function($checkReq) use($myId, $usersId) {
+
+        $checkRequests = Req::where(function($checkReq) use($myId, $usersId) {
             $checkReq->where('sender', $myId)
                          ->whereIn('receiver', $usersId);
                         })
@@ -37,6 +34,7 @@ class UsersController extends Controller
             $checkReq->whereIn('sender', $usersId)
                          ->where('receiver', $myId);
                         })->get()->toArray();
+
         $checkSubscriptions = Subscription::where(function($checkSub) use($myId, $usersId) {
             $checkSub->where('subscriber', $myId)
                 ->whereIn('followed', $usersId);
@@ -81,7 +79,8 @@ class UsersController extends Controller
 
     public function findUsers(Request $request)
     {
-        //if (isset($request->findUsers)) {
+        if ($request->findUsers != '') {
+        $request->flash();
             $myId = Auth::id();
             $name = explode(' ', $request->findUsers);
             $count = count($name);
@@ -101,10 +100,9 @@ class UsersController extends Controller
                                 ['last_name', $name[0]]]);
                     })->paginate(1);
             }
-        //} else {
-            //$users = $request->old('findUsers');
-            //return redirect()->back();
-        //}
+        } else {
+           return redirect()->back();
+        }
 
         $cityId = $users->pluck('city_id')->toArray();
         $cityId = array_unique($cityId);
@@ -121,7 +119,7 @@ class UsersController extends Controller
                     ->where('friend2', $myId);
             })->get()->toArray();
 
-        $checkRequests = \App\Request::where(function($checkReq) use($myId, $usersId) {
+        $checkRequests = Req::where(function($checkReq) use($myId, $usersId) {
             $checkReq->where('sender', $myId)
                 ->whereIn('receiver', $usersId);
         })
@@ -167,6 +165,7 @@ class UsersController extends Controller
             }
         }
 
+        $users->appends($request->only('findUsers'))->links();
         $data = ['cities' => $cities, 'users' => $users, 'friends' => $friends,
             'senders' => $senders, 'receivers' => $receivers];
         return view('users/users', $data);
@@ -178,7 +177,7 @@ class UsersController extends Controller
         if (!$request || $request->id == $myId) {
             throw new \Exception('Wrong user id');
         }
-        \App\Request::insert(array('sender' => $myId, 'receiver' => $request->id));
+        Req::insert(array('sender' => $myId, 'receiver' => $request->id));
         return redirect()->back();
     }
 
@@ -189,10 +188,10 @@ class UsersController extends Controller
             throw new \Exception('Wrong user id');
         }
         Friend::insert(array('friend1' => $myId, 'friend2' => $request->id));
-        \App\Request::where('sender', $request->id)
+        Req::where('sender', $request->id)
                       ->where('receiver', $myId)->delete();
-        Subscription::where('followed', $request->id)
-            ->where('subscriber', $myId)->delete();
+        Subscription::where([['followed', $request->id], ['subscriber', $myId]])->delete();
+            //->where('subscriber', $myId)->delete();
 
         return redirect()->back();
     }
@@ -204,7 +203,7 @@ class UsersController extends Controller
             throw new \Exception('Wrong user id');
         }
         Subscription::insert(array('subscriber' => $myId, 'followed' => $request->id));
-        \App\Request::where('sender', $request->id)
+        Req::where('sender', $request->id)
             ->where('receiver', $myId)->delete();
         return redirect()->back();
     }
